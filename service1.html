@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>셔틀버스 안내</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./team(2).css" />
+    <style>
+      .shuttle-section {
+        width: 90%;
+        margin: 80px auto;
+      }
+
+      .shuttle-section h2 {
+        font-size: 3rem;
+        color: #344354;
+        margin-bottom: 40px;
+        border-left: 8px solid #344354;
+        padding-left: 20px;
+      }
+
+      /* 버스 카드 */
+      .bus-card {
+        background: white;
+        border-radius: 24px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+        padding: 40px 50px;
+        margin-bottom: 50px;
+      }
+
+      .bus-number {
+        display: inline-block;
+        background: #c0392b;
+        color: white;
+        font-size: 3.5rem;
+        font-weight: bold;
+        padding: 10px 36px;
+        border-radius: 16px;
+        margin-bottom: 28px;
+        letter-spacing: 2px;
+      }
+
+      .bus-meta {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+
+      .bus-meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .bus-meta-item .label {
+        font-size: 1.2rem;
+        color: #888;
+      }
+
+      .bus-meta-item .value {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #344354;
+      }
+
+      .bus-route-label {
+        font-size: 1.5rem;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .bus-route-label span {
+        color: #c0392b;
+        font-weight: bold;
+      }
+
+      /* 요금 테이블 */
+      .info-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+      }
+
+      .info-table th {
+        background: #344354;
+        color: white;
+        padding: 14px 20px;
+        text-align: center;
+      }
+
+      .info-table td {
+        padding: 14px 20px;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+        background: white;
+      }
+
+      .info-table tr:nth-child(even) td {
+        background: #f7f9fc;
+      }
+
+      /* 안내 박스 */
+      .info-box {
+        background: #eef1f5;
+        border-radius: 16px;
+        padding: 28px 34px;
+        margin-bottom: 30px;
+      }
+
+      .info-box ul {
+        padding-left: 24px;
+      }
+
+      .info-box li {
+        font-size: 1.6rem;
+        margin-bottom: 14px;
+        color: #2f3a4a;
+        line-height: 1.6;
+      }
+
+      .info-box li strong {
+        color: #344354;
+      }
+
+      /* 노선 이미지 */
+      .route-img-box {
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 3px solid #ddd;
+        margin-bottom: 30px;
+      }
+
+      .route-img-box img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* 포항버스 링크 버튼 */
+      .pohang-link {
+        display: inline-block;
+        background: #344354;
+        color: white;
+        font-family: "Gaegu", cursive;
+        font-size: 1.6rem;
+        padding: 16px 36px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.2s;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .pohang-link:hover {
+        background: #2f3a4a;
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 768px) {
+        .bus-card {
+          padding: 24px 20px;
+        }
+        .bus-number {
+          font-size: 2.5rem;
+        }
+        .bus-meta {
+          gap: 20px;
+        }
+        .bus-meta-item .value {
+          font-size: 1.4rem;
+        }
+        .info-table {
+          font-size: 1.2rem;
+        }
+        .info-box li {
+          font-size: 1.3rem;
+        }
+        .shuttle-section h2 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+      <!-- 좌측 메뉴 그룹 -->
+      <div class="nav-left-group">
+        <div class="nav-item menu">
+          <span>SPACE</span>
+          <div class="dropdown">
+            <a href="study1.html">휴식 공간</a>
+            <a href="study2.html">스터디룸</a>
+            <a href="study3.html">기숙사</a>
+          </div>
+        </div>
+        <div class="nav-item menu">
+          <span>RESTAURANT</span>
+          <div class="dropdown">
+            <a href="./restauant(1).html">학관</a>
+            <a href="./restaurant(2).html">라운지</a>
+            <a href="./restaurant(3).html">기타</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 중앙 로고 -->
+      <a href="team.html" class="logo">
+        <img src="./Logo.png" alt="cloud logo" />
+      </a>
+
+      <!-- 우측 메뉴 그룹 -->
+      <div class="nav-right-group">
+        <div class="nav-item menu">
+          <span>SERVICE</span>
+          <div class="dropdown">
+            <a href="service1.html">셔틀버스</a>
+            <a href="service2.html">의료시설</a>
+          </div>
+        </div>
+        <div class="nav-item menu">
+          <span>CAFE</span>
+          <div class="dropdown">
+          <a href="Cafe.html">히즈빈스</a>
+          <a href="cafe(2).html">에인트</a>
+          <a href="cafe(3).html">빽다방</a>
+          <a href="yesod.html">예소드</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= TITLE ================= -->
+    <section class="title-section">
+      <h1>셔틀버스 안내</h1>
+    </section>
+
+    <!-- ================= CONTENT ================= -->
+    <div class="shuttle-section">
+      <!-- 302번 버스 -->
+      <h2>시내버스 노선</h2>
+
+      <div class="bus-card" id="bus302">
+        <div class="bus-number">302</div>
+
+        <div class="bus-meta">
+          <div class="bus-meta-item">
+            <span class="label">첫차</span>
+            <span class="value">05:10</span>
+          </div>
+          <div class="bus-meta-item">
+            <span class="label">막차</span>
+            <span class="value">22:50</span>
+          </div>
+          <div class="bus-meta-item">
+            <span class="label">배차간격</span>
+            <span class="value">평균 15분</span>
+          </div>
+        </div>
+
+        <p class="bus-route-label">
+          <span>문덕</span> 《 영일고등학교 · 해도119안전센터 · 환호공원 》
+          <span>한동대</span>
+        </p>
+
+        <!-- 노선도 이미지 -->
+        <div class="route-img-box">
+          <img src="./302.png" alt="302번 버스 노선도" />
+        </div>
+
+        <!-- 환승·이용 안내 -->
+        <div class="info-box">
+          <ul>
+            <li>
+              <strong>환승</strong> : 하차 단말기 태그 후
+              <strong>40분 이내</strong> 환승 가능<br />
+            </li>
+            <li><strong>다인 승차 시</strong> : 환승 할인은 1명만 적용</li>
+            <li>
+              출발지 : <strong>문덕차고지</strong> → 도착지 :
+              <strong>한동대학교</strong>
+            </li>
+          </ul>
+        </div>
+
+        <a
+          href="https://www.pohang.go.kr/bis/busRoute.do"
+          target="_blank"
+          class="pohang-link"
+        >
+          📍 포항시 버스정보시스템 바로가기
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

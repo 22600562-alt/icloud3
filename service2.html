@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>의료시설 안내</title>
+
+    <!-- 손글씨 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./team(2).css" />
+
+    <style>
+      .notice-section {
+        width: 90%;
+        margin: 80px auto;
+      }
+
+      .notice-section h2 {
+        font-size: 3rem;
+        color: #344354;
+        margin-bottom: 40px;
+        border-left: 8px solid #344354;
+        padding-left: 20px;
+      }
+
+      /* 시설 카드 */
+      .facility-card {
+        background: white;
+        border-radius: 24px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+        padding: 40px 50px;
+        margin-bottom: 50px;
+      }
+
+      .facility-name {
+        display: inline-block;
+        background: #344354;
+        color: white;
+        font-size: 2.8rem;
+        font-weight: bold;
+        padding: 10px 36px;
+        border-radius: 16px;
+        margin-bottom: 28px;
+        letter-spacing: 1px;
+      }
+
+      /* 위치 / 전화 메타 */
+      .facility-meta {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+
+      .facility-meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .facility-meta-item .label {
+        font-size: 1.2rem;
+        color: #888;
+      }
+
+      .facility-meta-item .value {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #344354;
+      }
+
+      /* 운영시간 테이블 */
+      .hours-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
+
+      .hours-table th {
+        background: #344354;
+        color: white;
+        padding: 14px 20px;
+        text-align: center;
+      }
+
+      .hours-table td {
+        padding: 14px 20px;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+        background: white;
+        line-height: 1.6;
+      }
+
+      .hours-table tr:nth-child(even) td {
+        background: #f7f9fc;
+      }
+
+      .hours-table .day-col {
+        font-weight: bold;
+        color: #344354;
+        text-align: left;
+      }
+
+      .hours-table .closed {
+        color: #c0392b;
+        font-weight: bold;
+      }
+
+      .hours-table .open {
+        color: #27ae60;
+        font-weight: bold;
+      }
+
+      .table-note {
+        font-size: 1.2rem;
+        color: #888;
+        margin-top: 6px;
+        padding-left: 4px;
+      }
+
+      @media (max-width: 768px) {
+        .facility-card {
+          padding: 24px 20px;
+        }
+        .facility-name {
+          font-size: 2rem;
+        }
+        .facility-meta {
+          gap: 20px;
+        }
+        .facility-meta-item .value {
+          font-size: 1.4rem;
+        }
+        .hours-table {
+          font-size: 1.2rem;
+        }
+        .notice-section h2 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+      <div class="nav-left-group">
+        <div class="nav-item menu">
+          <span>SPACE</span>
+          <div class="dropdown">
+            <a href="study1.html">휴식 공간</a>
+            <a href="study2.html">스터디룸</a>
+            <a href="study3.html">기숙사</a>
+          </div>
+        </div>
+        <div class="nav-item menu">
+          <span>RESTAURANT</span>
+          <div class="dropdown">
+            <a href="./restauant(1).html">학관</a>
+            <a href="./restaurant(2).html">라운지</a>
+            <a href="./restaurant(3).html">기타</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="team.html" class="logo">
+        <img src="./Logo.png" alt="cloud logo" />
+      </a>
+
+      <div class="nav-right-group">
+        <div class="nav-item menu">
+          <span>SERVICE</span>
+          <div class="dropdown">
+            <a href="service1.html">셔틀버스</a>
+            <a href="service2.html">의료시설</a>
+          </div>
+        </div>
+        <div class="nav-item menu">
+          <span>CAFE</span>
+          <div class="dropdown">
+             <a href="Cafe.html">히즈빈스</a>
+          <a href="cafe(2).html">에인트</a>
+          <a href="cafe(3).html">빽다방</a>
+          <a href="yesod.html">예소드</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= TITLE ================= -->
+    <section class="title-section">
+      <h1>의료 시설</h1>
+    </section>
+
+    <!-- ================= CONTENT ================= -->
+    <div class="notice-section">
+      <h2>의료 시설 안내</h2>
+
+      <!-- 보건실 카드 -->
+      <div class="facility-card">
+        <div class="facility-name">보건실</div>
+
+        <div class="facility-meta">
+          <div class="facility-meta-item">
+            <span class="label">위치</span>
+            <span class="value">복지동 3층</span>
+          </div>
+          <div class="facility-meta-item">
+            <span class="label">전화번호</span>
+            <span class="value">054-260-1995</span>
+          </div>
+        </div>
+
+        <table class="hours-table">
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>운영시간</th>
+              <th>비고 (식사시간 휴무)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="day-col">평일</td>
+              <td class="open">09:00 ~ 22:00</td>
+              <td>12:00~13:00 / 18:00~19:00</td>
+            </tr>
+            <tr>
+              <td class="day-col">토요일</td>
+              <td class="open">09:00 ~ 17:00</td>
+              <td>12:00~13:00</td>
+            </tr>
+            <tr>
+              <td class="day-col">주일 · 공휴일</td>
+              <td class="closed">휴무</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-note">※ 식사시간에는 운영이 중단됩니다.</p>
+      </div>
+
+      <!-- 보아스 메디컬 카드 -->
+      <div class="facility-card">
+        <div class="facility-name">보아스 메디컬</div>
+
+        <div class="facility-meta">
+          <div class="facility-meta-item">
+            <span class="label">위치</span>
+            <span class="value">복지동 3층</span>
+          </div>
+          <div class="facility-meta-item">
+            <span class="label">전화번호</span>
+            <span class="value">054-260-3022</span>
+          </div>
+        </div>
+
+        <table class="hours-table">
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>운영시간</th>
+              <th>비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="day-col">평일</td>
+              <td class="open">14:00 ~ 18:00</td>
+              <td>접수 마감 17:40</td>
+            </tr>
+            <tr>
+              <td class="day-col">토요일</td>
+              <td class="closed">휴무</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td class="day-col">주일 · 공휴일</td>
+              <td class="closed">휴무</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-note">※ 접수는 17:40까지만 가능합니다.</p>
+      </div>
+    </div>
+  </body>
+</html>
